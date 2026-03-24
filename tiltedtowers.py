@@ -102,6 +102,43 @@ class Casa:
             turtle.forward(30)
             turtle.right(90)
         turtle.end_fill()
+        temp = random.randint(0,7)
+        if temp == 5:
+            turtle.penup()
+            turtle.seth(0)
+            turtle.setx(self.coord[0] + x - 5)
+            turtle.sety(self.coord[1] + etage * 60)
+            turtle.left(90)
+            turtle.forward(17)
+            turtle.pendown()
+            turtle.color('black')
+            turtle.seth(0)
+            for i in range(2):
+                turtle.forward(40)
+                turtle.left(90)
+                turtle.forward(15)
+                turtle.left(90)
+            turtle.penup()
+            turtle.seth(0)
+            turtle.setx(self.coord[0] + x - 5)
+            turtle.sety(self.coord[1] + etage * 60)
+            turtle.left(90)
+            turtle.forward(17)
+            turtle.pendown()
+            turtle.color('black')
+            turtle.seth(0)
+            for i in range(4):
+                turtle.forward(5)
+                turtle.left(90)
+                turtle.forward(15)
+                turtle.right(90)
+                turtle.forward(5)
+                turtle.right(90)
+                turtle.forward(15)
+                turtle.left(90)
+                
+
+
 
     def dessintoit(self, etage, styletoit):
         if styletoit == 'triangle':
