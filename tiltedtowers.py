@@ -20,6 +20,10 @@ class Casa:
     def toitalea(self):
         toits = ['plat', 'triangle']
         return random.choice(toits)
+    
+    def portealea(self):
+        portesss = ['regular', 'goofy']
+        return random.choice(portesss)
 
     def pos(self):
         turtle.pos()
@@ -28,7 +32,7 @@ class Casa:
         pass
 
     def dessinporte(self):
-        turtle.color('black', self.couleuralea())
+        turtle.color('black', self.couleurporte)
         turtle.seth(0)
         turtle.penup()
         turtle.sety(self.coord[1])
@@ -44,8 +48,27 @@ class Casa:
         turtle.forward(50)
         turtle.end_fill()
 
-    def rdc(self):
+    def porteronde(self):
+        turtle.color('black', self.couleurporte)
         turtle.seth(0)
+        turtle.penup()
+        turtle.sety(self.coord[1])
+        turtle.setx(self.coord[0] + 55)
+        turtle.pendown()
+        turtle.begin_fill()
+        turtle.forward(30)
+        turtle.left(90)
+        turtle.forward(40)
+        turtle.circle(15,180)
+        turtle.forward(40)
+        turtle.end_fill()
+        turtle.penup()
+
+    def rdc(self):
+        turtle.penup()
+        turtle.setpos(self.coord)
+        turtle.seth(0)
+        turtle.pendown()
         turtle.color('black', self.couleur)
         turtle.begin_fill()
         turtle.forward(140)
@@ -56,7 +79,10 @@ class Casa:
         turtle.left(90)
         turtle.forward(60)
         turtle.end_fill()
-        self.dessinporte()
+        if self.porte == 'regular':
+            self.dessinporte()
+        elif self.porte == 'goofy':
+            self.porteronde()
         self.fenetre('gauche', 0)
         self.fenetre('droite', 0)
 
@@ -104,8 +130,6 @@ class Casa:
                 turtle.forward(30)
                 turtle.right(90)
             turtle.end_fill()
-
-            
     
     def portefenetre(self, x, etage):
         turtle.seth(0)
@@ -197,53 +221,52 @@ class Casa:
         for i in range(self.nbetage):
             self.etage(i+1)
         self.dessintoit(self.nbetage, self.toit)
-        turtle.done()
+        
+        
+class Rue(Casa):
+    def __init__(self, nb=None):
+        self.maisons = []
+        self.nb = 5
+        for i in range(self.nb):
+            couleur_maison = self.couleuralea()
+            etages = random.randint(2,5)
+            m = Casa(self.toitalea(), self.portealea(), etages, couleur_maison, self.couleuralea())
+            self.maisons.append(m)
 
-######################################################################################
+    def dessiner(self):
+        x = -300
+        y = -150
+        for m in self.maisons:
+            m.coord = (x, y)
+            m.dessincasa()
+            x += 180        
+        self.dessinrue()
 
- def rdc(self):
+    def dessinrue(self):
         turtle.penup()
-        turtle.setpos(self.coord)
+        turtle.setpos(-400, -200)
         turtle.seth(0)
         turtle.pendown()
-        turtle.color('black', self.couleur)
+        turtle.color('black','gray')
         turtle.begin_fill()
-        turtle.forward(140)
+        turtle.forward(200+180*5)
         turtle.left(90)
-        turtle.forward(60)
+        turtle.forward(50)
         turtle.left(90)
-        turtle.forward(140)
+        turtle.forward(200+180*5)
         turtle.left(90)
-        turtle.forward(60)
+        turtle.forward(50)
         turtle.end_fill()
-        self.dessinporte()
-        self.fenetre('gauche', 0)
-        self.fenetre('droite', 0)
+    turtle.hideturtle()
 
-def fenetre(self,side, etage):
-        if side == 'gauche':
-            x = 15
-        if side == 'mid':
-            x = 55
-        if side == 'droite':
-            x = 95
-        turtle.seth(0)
-        turtle.penup()
-        turtle.setx(self.coord[0] + x)
-        turtle.sety(self.coord[1] + etage * 60)
-        turtle.left(90)
-        turtle.forward(20)
-        turtle.pendown()
-        turtle.color('black', 'light blue')
-        turtle.begin_fill()
-        for i in range(4):
-            turtle.forward(30)
-            turtle.right(90)
-        turtle.end_fill()
 
-def dessincasa(self):
-        self.rdc()
-        for i in range(self.nbetage):
-            self.etage(i+1)
-        style_toit = random.choice(['triangle', 'plat'])
-        self.dessintoit(self.nbetage, style_toit)
+rue = Rue()
+rue.dessiner()
+turtle.done()
+        
+    
+    
+
+
+#gg = Casa(None ,None,3,None, None)
+##gg.dessincasa()
