@@ -4,7 +4,13 @@ import random
 turtle.speed(10000000)
 
 class Casa:
-
+    """Classe représentant une maison avec ses caractéristiques :
+            toit: Style du toit ('triangle' ou 'plat').
+            porte: Style de porte ('goofy' ou 'regular')
+            nbetage: Nombre d'étages.
+            couleur: Couleur de la maison.
+            couleurporte: Couleur de la porte.
+    """
     def __init__(self, toit, porte, nbetage, couleur, couleurporte):
         self.toit = toit
         self.porte = porte
