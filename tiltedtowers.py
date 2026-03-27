@@ -199,7 +199,7 @@ class Casa:
         self.dessintoit(self.nbetage, self.toit)
         turtle.done()
 
-
+######################################################################################
 
  def rdc(self):
         turtle.penup()
@@ -219,4 +219,24 @@ class Casa:
         self.dessinporte()
         self.fenetre('gauche', 0)
         self.fenetre('droite', 0)
-        
+
+def fenetre(self,side, etage):
+        if side == 'gauche':
+            x = 15
+        if side == 'mid':
+            x = 55
+        if side == 'droite':
+            x = 95
+        turtle.seth(0)
+        turtle.penup()
+        turtle.setx(self.coord[0] + x)
+        turtle.sety(self.coord[1] + etage * 60)
+        turtle.left(90)
+        turtle.forward(20)
+        turtle.pendown()
+        turtle.color('black', 'light blue')
+        turtle.begin_fill()
+        for i in range(4):
+            turtle.forward(30)
+            turtle.right(90)
+        turtle.end_fill()
