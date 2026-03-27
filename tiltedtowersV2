@@ -107,8 +107,6 @@ class Casa:
                 turtle.forward(30)
                 turtle.right(90)
             turtle.end_fill()
-
-            
     
     def portefenetre(self, x, etage):
         turtle.seth(0)
@@ -205,10 +203,10 @@ class Casa:
 class Rue(Casa):
     def __init__(self, nb=None):
         self.maisons = []
-        self.nb = nb if nb is not None else random.randint(2, 5)
+        self.nb = 5
         for i in range(self.nb):
             couleur_maison = self.couleuralea()
-            etages = random.randint(2, 4)
+            etages = random.randint(0,0)
             m = Casa(self.toitalea(), True, etages, couleur_maison, None)
             self.maisons.append(m)
 
@@ -224,17 +222,19 @@ class Rue(Casa):
     def dessinrue(self):
         turtle.penup()
         turtle.setpos(-400, -200)
+        turtle.seth(0)
         turtle.pendown()
         turtle.color('gray')
         turtle.begin_fill()
-        turtle.forward(800)
+        turtle.forward(200+180*5)
         turtle.left(90)
         turtle.forward(50)
         turtle.left(90)
-        turtle.forward(800)
+        turtle.forward(200+180*5)
         turtle.left(90)
         turtle.forward(50)
         turtle.end_fill()
+    turtle.hideturtle()
 
 
 rue = Rue()
