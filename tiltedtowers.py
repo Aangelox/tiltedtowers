@@ -9,19 +9,17 @@ class Casa:
         self.toit = toit
         self.porte = porte
         self.nbetage = nbetage
-        if couleur == None:
-            self.couleur = self.couleuralea()
-        else:
-            self.couleur = couleur
-        if couleurporte == None:
-            self.couleurporte = self.couleuralea()
-        else:
-            self.couleurporte = couleurporte
+        self.couleur = couleur
+        self.couleurporte = couleurporte
         self.coord = turtle.pos()
 
     def couleuralea(self):
         colors = ["AliceBlue","AntiqueWhite","AntiqueWhite1","AntiqueWhite2","AntiqueWhite3","AntiqueWhite4","aquamarine","aquamarine1","aquamarine2","aquamarine3","aquamarine4","azure","azure1","azure2","azure3","azure4","beige","bisque","bisque1","bisque2","bisque3","bisque4","black","BlanchedAlmond","blue","blue1","blue2","blue3","blue4","BlueViolet","brown","brown1","brown2","brown3","brown4","burlywood","burlywood1","burlywood2","burlywood3","burlywood4","CadetBlue","CadetBlue1","CadetBlue2","CadetBlue3","CadetBlue4","chartreuse","chartreuse1","chartreuse2","chartreuse3","chartreuse4","chocolate","chocolate1","chocolate2","chocolate3","chocolate4","coral","coral1","coral2","coral3","coral4","CornflowerBlue","cornsilk","cornsilk1","cornsilk2","cornsilk3","cornsilk4","cyan","cyan1","cyan2","cyan3","cyan4","DarkBlue","DarkCyan","DarkGoldenrod","DarkGoldenrod1","DarkGoldenrod2","DarkGoldenrod3","DarkGoldenrod4","DarkGray","DarkGreen","DarkGrey","DarkKhaki","DarkMagenta","DarkOliveGreen","DarkOliveGreen1","DarkOliveGreen2","DarkOliveGreen3","DarkOliveGreen4","DarkOrange","DarkOrange1","DarkOrange2","DarkOrange3","DarkOrange4","DarkOrchid","DarkOrchid1","DarkOrchid2","DarkOrchid3","DarkOrchid4","DarkRed","DarkSalmon","DarkSeaGreen","DarkSeaGreen1","DarkSeaGreen2","DarkSeaGreen3","DarkSeaGreen4","DarkSlateBlue","DarkSlateGray","DarkSlateGray1","DarkSlateGray2","DarkSlateGray3","DarkSlateGray4","DarkSlateGrey","DarkTurquoise","DarkViolet","DeepPink","DeepPink1","DeepPink2","DeepPink3","DeepPink4","DeepSkyBlue","DeepSkyBlue2","DeepSkyBlue3","DeepSkyBlue4","DimGray","DimGrey","DodgerBlue","DodgerBlue1","DodgerBlue2","DodgerBlue3","DodgerBlue4","firebrick","firebrick1","firebrick2","firebrick3","firebrick4","FloralWhite","ForestGreen","gainsboro","GhostWhite","gold","gold1","gold2","gold3","gold4","goldenrod","goldenrod1","goldenrod2","goldenrod3","goldenrod4","gray","gray0","gray10","gray20","gray30","gray40","gray50","gray60","gray70","gray80","gray90","gray100","green","green1","green2","green3","green4","GreenYellow","honeydew","honeydew1","honeydew2","honeydew3","honeydew4","hotpink","HotPink","HotPink1","HotPink2","HotPink3","HotPink4","IndianRed","IndianRed1","IndianRed2","IndianRed3","IndianRed4","ivory","ivory1","ivory2","ivory3","ivory4","khaki","khaki1","khaki2","khaki3","khaki4","lavender","LavenderBlush","LavenderBlush1","LavenderBlush2","LavenderBlush3","LavenderBlush4","lawnGreen","LawnGreen","LemonChiffon","LemonChiffon1","LemonChiffon2","LemonChiffon3","LemonChiffon4","LightBlue","LightBlue1","LightBlue2","LightBlue3","LightBlue4","LightCoral","LightCyan","LightCyan1","LightCyan2","LightCyan3","LightCyan4","LightGoldenrod","LightGoldenrod1","LightGoldenrod2","LightGoldenrod3","LightGoldenrod4","LightGoldenrodYellow","LightGray","LightGrey","LightGreen","LightPink","LightPink1","LightPink2","LightPink3","LightPink4","LightSalmon","LightSalmon1","LightSalmon2","LightSalmon3","LightSalmon4","LightSeaGreen","LightSkyBlue","LightSkyBlue1","LightSkyBlue2","LightSkyBlue3","LightSkyBlue4","LightSlateBlue","LightSlateGray","LightSlateGrey","LightSteelBlue","LightSteelBlue1","LightSteelBlue2","LightSteelBlue3","LightSteelBlue4","LightYellow","LightYellow1","LightYellow2","LightYellow3","LightYellow4","LimeGreen","linen","magenta","magenta1","magenta2","magenta3","magenta4","maroon","maroon1","maroon2","maroon3","maroon4","MediumAquamarine","MediumBlue","MediumOrchid","MediumOrchid1","MediumOrchid2","MediumOrchid3","MediumOrchid4","MediumPurple","MediumPurple1","MediumPurple2","MediumPurple3","MediumPurple4","MediumSeaGreen","MediumSlateBlue","MediumSpringGreen","MediumTurquoise","MediumVioletRed","midnightblue","MidnightBlue","MintCream","MistyRose","MistyRose1","MistyRose2","MistyRose3","MistyRose4","moccasin","NavajoWhite","NavajoWhite1","NavajoWhite2","NavajoWhite3","NavajoWhite4","navy","NavyBlue","OldLace","OliveDrab","OliveDrab1","OliveDrab2","OliveDrab3","OliveDrab4","orange","orange1","orange2","orange3","orange4","OrangeRed","OrangeRed1","OrangeRed2","OrangeRed3","OrangeRed4","orchid","orchid1","orchid2","orchid3","orchid4","PaleGoldenrod","PaleGreen","PaleGreen1","PaleGreen2","PaleGreen3","PaleGreen4","PaleTurquoise","PaleTurquoise1","PaleTurquoise2","PaleTurquoise3","PaleTurquoise4","PaleVioletRed","PaleVioletRed1","PaleVioletRed2","PaleVioletRed3","PaleVioletRed4","PapayaWhip","PeachPuff","PeachPuff1","PeachPuff2","PeachPuff3","PeachPuff4","peru","pink","pink1","pink2","pink3","pink4","plum","plum1","plum2","plum3","plum4","PowderBlue","purple","purple1"]
         return random.choice(colors)
+    
+    def toitalea(self):
+        toits = ['plat', 'triangle']
+        return random.choice(toits)
 
     def pos(self):
         turtle.pos()
@@ -89,60 +87,75 @@ class Casa:
             x = 55
         if side == 'droite':
             x = 95
+        temp = random.randint(0,7)
+        if temp == 5:
+            self.portefenetre(x, etage)
+        else:
+            turtle.seth(0)
+            turtle.penup()
+            turtle.setx(self.coord[0] + x)
+            turtle.sety(self.coord[1] + etage * 60)
+            turtle.left(90)
+            turtle.forward(20)
+            turtle.pendown()
+            turtle.color('black', 'light blue')
+            turtle.begin_fill()
+            for i in range(4):
+                turtle.forward(30)
+                turtle.right(90)
+            turtle.end_fill()
+
+            
+    
+    def portefenetre(self, x, etage):
         turtle.seth(0)
         turtle.penup()
         turtle.setx(self.coord[0] + x)
         turtle.sety(self.coord[1] + etage * 60)
-        turtle.left(90)
-        turtle.forward(20)
         turtle.pendown()
         turtle.color('black', 'light blue')
         turtle.begin_fill()
-        for i in range(4):
+        for i in range(2):
             turtle.forward(30)
-            turtle.right(90)
+            turtle.left(90)
+            turtle.forward(50)
+            turtle.left(90)
         turtle.end_fill()
-        temp = random.randint(0,7)
-        if temp == 5:
-            turtle.penup()
-            turtle.seth(0)
-            turtle.setx(self.coord[0] + x - 5)
-            turtle.sety(self.coord[1] + etage * 60)
+        turtle.penup()
+        turtle.seth(0)
+        turtle.setx(self.coord[0] + x - 5)
+        turtle.sety(self.coord[1] + etage * 60)
+        turtle.pendown()
+        turtle.color('black')
+        turtle.seth(0)
+        for i in range(2):
+            turtle.forward(40)
             turtle.left(90)
-            turtle.forward(17)
-            turtle.pendown()
-            turtle.color('black')
-            turtle.seth(0)
-            for i in range(2):
-                turtle.forward(40)
-                turtle.left(90)
-                turtle.forward(15)
-                turtle.left(90)
-            turtle.penup()
-            turtle.seth(0)
-            turtle.setx(self.coord[0] + x - 5)
-            turtle.sety(self.coord[1] + etage * 60)
+            turtle.forward(15)
             turtle.left(90)
-            turtle.forward(17)
-            turtle.pendown()
-            turtle.color('black')
-            turtle.seth(0)
-            for i in range(4):
-                turtle.forward(5)
-                turtle.left(90)
-                turtle.forward(15)
-                turtle.right(90)
-                turtle.forward(5)
-                turtle.right(90)
-                turtle.forward(15)
-                turtle.left(90)
-                
+        turtle.penup()
+        turtle.seth(0)
+        turtle.setx(self.coord[0] + x - 5)
+        turtle.sety(self.coord[1] + etage * 60)
+        turtle.pendown()
+        turtle.color('black')
+        turtle.seth(0)
+        for i in range(4):
+            turtle.forward(5)
+            turtle.left(90)
+            turtle.forward(15)
+            turtle.right(90)
+            turtle.forward(5)
+            turtle.right(90)
+            turtle.forward(15)
+            turtle.left(90)
+        
 
 
 
     def dessintoit(self, etage, styletoit):
         if styletoit == 'triangle':
-            turtle.color('black', self.couleur)
+            turtle.color('black', 'black')
             turtle.penup()
             turtle.setx(self.coord[0])
             turtle.sety(self.coord[1] + (etage+1) * 60)
@@ -183,14 +196,7 @@ class Casa:
         self.rdc()
         for i in range(self.nbetage):
             self.etage(i+1)
-        self.dessintoit(self.nbetage, 'plat')
+        self.dessintoit(self.nbetage, self.toit)
         turtle.done()
         
         
-        
-    
-    
-
-
-gg = Casa(0,0,3,None, None)
-gg.dessincasa()
