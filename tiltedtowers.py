@@ -198,5 +198,25 @@ class Casa:
             self.etage(i+1)
         self.dessintoit(self.nbetage, self.toit)
         turtle.done()
-        
+
+
+
+ def rdc(self):
+        turtle.penup()
+        turtle.setpos(self.coord)
+        turtle.seth(0)
+        turtle.pendown()
+        turtle.color('black', self.couleur)
+        turtle.begin_fill()
+        turtle.forward(140)
+        turtle.left(90)
+        turtle.forward(60)
+        turtle.left(90)
+        turtle.forward(140)
+        turtle.left(90)
+        turtle.forward(60)
+        turtle.end_fill()
+        self.dessinporte()
+        self.fenetre('gauche', 0)
+        self.fenetre('droite', 0)
         
