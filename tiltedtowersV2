@@ -166,7 +166,23 @@ class Rue(Casa):
         for m in self.maisons:
             m.coord = (x, y)
             m.dessincasa()
-            x += 180
+            x += 180        
+        self.dessinrue()
+
+    def dessinrue(self):
+        turtle.penup()
+        turtle.setpos(-400, -200)
+        turtle.pendown()
+        turtle.color('gray')
+        turtle.begin_fill()
+        turtle.forward(800)
+        turtle.left(90)
+        turtle.forward(50)
+        turtle.left(90)
+        turtle.forward(800)
+        turtle.left(90)
+        turtle.forward(50)
+        turtle.end_fill()
 
 
 rue = Rue()
