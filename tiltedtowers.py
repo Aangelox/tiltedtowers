@@ -240,3 +240,10 @@ def fenetre(self,side, etage):
             turtle.forward(30)
             turtle.right(90)
         turtle.end_fill()
+
+def dessincasa(self):
+        self.rdc()
+        for i in range(self.nbetage):
+            self.etage(i+1)
+        style_toit = random.choice(['triangle', 'plat'])
+        self.dessintoit(self.nbetage, style_toit)
